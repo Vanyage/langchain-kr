@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "langchain-kr"
-version = "0.1.1"
+version = "0.1.0"
 description = "Ultimate LangChain Tutorial written in Korean by TeddyNote."
 authors = ["teddy <teddylee777@gmail.com>"]
 license = "MIT"
@@ -32,9 +32,6 @@ langsmith = "0.*"
 huggingface-hub = "0.*"
 openai = "1.*"
 deepl = "1.*"
-kiwipiepy = "0.*"
-konlpy = "0.*"
-
 # 데이터 처리 및 분석 관련 패키지
 pandas = "2.*"
 rank-bm25 = "0.*"
@@ -93,6 +90,21 @@ pinecone = "5.*"
 wikipedia = "1.*"
 scikit-learn = "1.*"
 
+[project]
+name = "langchain-kr"
+version = "0.1.0"
+dependencies = [
+    "numpy>=1.24.0",
+    "pandas>=2.0.0",
+    "konlpy>=0.0.0",
+    "kiwipiepy>=0.20.4",
+]
+
+[tool.uv.extra-build-dependencies]
+kiwipiepy = ["numpy"]
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.uv]
+package = false
